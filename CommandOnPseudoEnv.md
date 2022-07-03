@@ -2,16 +2,9 @@
 
 できるだけローカルを汚さないように、いつも使うようなコマンド集を集めた`devcontainer`.
 
-# toc
+# spec
 
-Ubuntu22.04ベース
-```
-cat /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=22.04
-DISTRIB_CODENAME=jammy
-DISTRIB_DESCRIPTION="Ubuntu 22.04 LTS"
-```
+Ubuntu22.04ベース([MSのdevcontainersのやつ](https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu))
 
 - go version go1.18.3 linux/arm64
 - python 3.10.5
