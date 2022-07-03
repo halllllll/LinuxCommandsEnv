@@ -2,6 +2,8 @@
 
 できるだけローカルを汚さないように、いつも使うようなコマンド集を集めた`devcontainer`.
 
+開発用のコマンドは入れない方針
+
 # spec
 
 Ubuntu22.04ベース([MSのdevcontainersのやつ](https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu))
@@ -16,3 +18,4 @@ Ubuntu22.04ベース([MSのdevcontainersのやつ](https://github.com/microsoft/
 - wget
 - scdl
 - yt-dlp
+- [ojichat](https://github.com/greymd/ojichat)
