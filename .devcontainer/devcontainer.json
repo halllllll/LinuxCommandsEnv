@@ -22,5 +22,12 @@
 		"python": "3.10",
 		"golang": "1.18",
 		"ruby": "latest"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"hediet.vscode-drawio"
+			]
+		}
 	}
 }

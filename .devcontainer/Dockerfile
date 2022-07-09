@@ -11,7 +11,10 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 USER root
 RUN apt-get update && apt-get upgrade
 RUN apt-get install -y ffmpeg
+
+# install yt-dlp
 RUN wget -qO /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 RUN chmod a+rx /usr/local/bin/yt-dlp
 
-
+# なぜか作成されない（エラーにもならないっぽい）
+RUN mkdir -p drive/scdl && mkdir -p drive/yt-dlp
