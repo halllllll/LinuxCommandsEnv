@@ -19,3 +19,7 @@ Ubuntu22.04ベース([MSのdevcontainersのやつ](https://github.com/microsoft/
 - scdl
 - yt-dlp
 - [ojichat](https://github.com/greymd/ojichat)
+- ffmpeg
+- spleeter
+  - python製音声分離ソフト (参照: [Mac で Spleeter を使ってみた](https://qiita.com/S_Katz/items/d528d221927e6929ab8e))
+  - ffmpegのあとに入れる
