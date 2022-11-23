@@ -11,11 +11,18 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 USER root
 RUN apt-get update -y
 RUN apt-get upgrade -y
+
+# install ffmpeg
 RUN apt-get install -y ffmpeg
 
 # install yt-dlp
 RUN wget -qO /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 RUN chmod a+rx /usr/local/bin/yt-dlp
+
+# install whisper-cpp
+RUN apt-get install -y build-essential cmake clang libssl-dev vim
+RUN git clone https://github.com/ggerganov/whisper.cpp.git && cd whisper.cpp && bash ./models/download-ggml-model.sh medium && make
+
 
 # なぜか作成されない（エラーにもならないっぽい）
 RUN mkdir -p drive/scdl && mkdir -p drive/yt-dlp
