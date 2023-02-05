@@ -1,3 +1,28 @@
+# scdl
+公式から引用
+```
+# Download track & repost of the user QUANTA
+scdl -l https://soundcloud.com/quanta-uk -a
+
+# Download likes of the user Blastoyz
+scdl -l https://soundcloud.com/kobiblastoyz -f
+
+# Download one track
+scdl -l https://soundcloud.com/jumpstreetpsy/low-extender
+
+# Download one playlist
+scdl -l https://soundcloud.com/pandadub/sets/the-lost-ship
+
+# Download only new tracks from a playlist
+scdl -l https://soundcloud.com/pandadub/sets/the-lost-ship --download-archive archive.txt -c
+
+# Sync playlist
+scdl -l https://soundcloud.com/pandadub/sets/the-lost-ship --sync archive.txt
+
+# Download your likes (with authentification token)
+scdl me -f
+```
+
 # ffmepg
 
 ## 4k high framerate
@@ -15,6 +40,11 @@
 > ffmpeg provides the -map option for manual control of stream selection in each output file. Users can skip -map and let ffmpeg perform automatic stream selection as described below. The -vn / -an / -sn / -dn options can be used to skip inclusion of video, audio, subtitle and data streams respectively, whether manually mapped or automatically selected, except for those streams which are outputs of complex filtergraphs. 
 
 ということで、映像だけ・音声だけ・字幕だけを抜き取るオプションがそれぞれある。`-dn`のデータストリームってのがよくわからない
+
+## mp4 to gif
+高画質で動画ファイルをgifアニメに。
+
+`ffmpeg -i input.mov -filter_complex "[0:v] fps=10,scale=640:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse" output-palette.gif`
 
 # yt-dlp
 
