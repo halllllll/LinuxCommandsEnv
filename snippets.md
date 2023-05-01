@@ -48,6 +48,12 @@ scdl me -f
 
 # yt-dlp
 
+## エラーが出た時
+アップデートすれば治ることがある（あった）
+```
+sudo yt-dlp -U
+```
+
 ## [basic] DL先指定
 アウトプット先のパスを指定する`-P`オプション。以下は、適当な動画を、カレントディレクトリの`drive`フォルダの`youtube`フォルダを指定する例
 ```
@@ -93,6 +99,6 @@ yt-dlp -x -f "ba[ext=webm]" --audio-format m4a "[URL]"
   明示的にオプションで指定しないと、テキストファイルが吐き出されない。吐き出される場所は`-f`と同ディレクトリだった
   
   ```
-  $ /whisper.cpp/main  --language ja --model /whisper.cpp/models/ggml-medium.bin -f ./drive/fisherwiki2_cpp_16khz.wav -v -pc -ovtt -otxt
+  $ /whisper.cpp/main  --language ja --model /whisper.cpp/models/ggml-medium.bin -f ./drive/fisherwiki2_cpp_16khz.wav -v -pc -ovtt -otxt -osrt
   whisper_model_load: loading model from '/whisper.cpp/models/ggml-medium.bin'
   ```
