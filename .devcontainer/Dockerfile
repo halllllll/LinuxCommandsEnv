@@ -18,6 +18,8 @@ RUN apt-get install -y ffmpeg
 # install yt-dlp
 RUN wget -qO /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 RUN chmod a+rx /usr/local/bin/yt-dlp
+# update
+RUN yt-dlp -U
 
 # install whisper-cpp
 RUN apt-get install -y build-essential cmake clang libssl-dev vim
