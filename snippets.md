@@ -25,6 +25,16 @@ scdl me -f
 
 # ffmepg
 
+## フォーマット変換（単純）
+オプションなしの場合。たとえば`yt-dlp`で落としたファイルが`mkv`形式だけど「あ〜これWindowsか〜！OBSデフォルト設定やめろ〜！こちとらmacじゃ〜〜い！」みたいなとき
+
+```
+ffmpeg -i input.mkv -c:v libx264 -crf 23 -preset veryslow -c:a aac -b:a 192k output.mp4
+```
+
+`-c:a aac`の部分は`-c:a copy`でもいいかもしれないし、`-crf 23`はデフォルト値がこれらしいので不要かもしれない...
+
+
 ## 4k high framerate
 
 [YouTubeオススメのffmpegのエンコードオプション設定例](https://qiita.com/hotstaff/items/c64e27bb0c0317084515#%E3%82%B3%E3%83%94%E3%83%9A%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89)からのパクリ
